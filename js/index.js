@@ -52,6 +52,8 @@ const newText2 = document.createTextNode("So Cool!");
 newLink2.appendChild(newText2);
 document.querySelector("nav").appendChild(newLink);
 document.querySelector("nav").prepend(newLink2);
+document.querySelector("header nav a:nth-of-type(1)").style.color = "green";
+document.querySelector("header nav a:nth-of-type(8)").style.color = "green";
 
 
 const cta = document.querySelector(".cta");
@@ -94,6 +96,7 @@ pText4.textContent = siteContent["main-content"]["product-content"];
 const pText5 = bottomContent.querySelector(".text-content:nth-of-type(3) p");
 pText5.textContent = siteContent["main-content"]["vision-content"];
 
+document.querySelector(".contact").style.textAlign = "center";
 const h4Contact = document.querySelector(".contact h4");
 h4Contact.textContent = siteContent["contact"]["contact-h4"];
 const pContact = document.querySelector(".contact p:nth-of-type(1)");
