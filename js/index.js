@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -37,6 +37,29 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const navLink1 = document.querySelector("header nav a");
+navLink1.textContent = siteContent["nav"]["nav-item-1"];
+const navLink2 = navLink1.nextElementSibling;
+navLink2.textContent = siteContent["nav"]["nav-item-2"];
+const navLink3 = navLink2.nextElementSibling;
+navLink3.textContent = siteContent["nav"]["nav-item-3"];
+const navLink4 = navLink3.nextElementSibling;
+navLink4.textContent = siteContent["nav"]["nav-item-4"];
+const navLink5 = navLink4.nextElementSibling;
+navLink5.textContent = siteContent["nav"]["nav-item-5"];
+const navLink6 = navLink5.nextElementSibling;
+navLink6.textContent = siteContent["nav"]["nav-item-6"];
+
+const cta = document.querySelector(".cta");
+cta.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
+
+const codeImg = document.getElementById("cta-img");
+codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+const 
+
+
