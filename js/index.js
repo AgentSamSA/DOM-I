@@ -53,11 +53,34 @@ codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
 const button = document.querySelector(".cta button");
 button.textContent = siteContent["cta"]["button"];
 
-const topContentText = document.querySelector(".top-content .text-content");
-const h4Text = topContentText.querySelector("h4");
-h4Text.textContent = siteContent["main-content"]["features-h4"];
-const pText = topContentText.querySelector("p");
-pText.textContent = siteContent["main-content"]["features-content"];
-const copyOfTopContentText = topContentText.cloneNode(true);
+const topContent = document.querySelector(".top-content");
 
+const h4Text = topContent.querySelector(".text-content:nth-of-type(1) h4");
+h4Text.textContent = siteContent["main-content"]["features-h4"];
+const h4Text2 = topContent.querySelector(".text-content:nth-of-type(2) h4");
+h4Text2.textContent = siteContent["main-content"]["about-h4"];
+
+const pText = topContent.querySelector(".text-content:nth-of-type(1) p");
+pText.textContent = siteContent["main-content"]["features-content"];
+const pText2 = topContent.querySelector(".text-content:nth-of-type(2) p");
+pText2.textContent = siteContent["main-content"]["about-content"];
+
+const codeSnippets = document.getElementById("middle-img");
+codeSnippets.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+const bottomContent = document.querySelector(".bottom-content");
+
+const h4Text3 = bottomContent.querySelector(".text-content:nth-of-type(1) h4");
+h4Text3.textContent = siteContent["main-content"]["services-h4"];
+const h4Text4 = bottomContent.querySelector(".text-content:nth-of-type(2) h4");
+h4Text4.textContent = siteContent["main-content"]["product-h4"];
+const h4Text5 = bottomContent.querySelector(".text-content:nth-of-type(3) h4");
+h4Text5.textContent = siteContent["main-content"]["vision-h4"];
+
+const pText3 = bottomContent.querySelector(".text-content:nth-of-type(1) p");
+pText3.textContent = siteContent["main-content"]["services-content"];
+const pText4 = bottomContent.querySelector(".text-content:nth-of-type(2) p");
+pText4.textContent = siteContent["main-content"]["product-content"];
+const pText5 = bottomContent.querySelector(".text-content:nth-of-type(3) p");
+pText5.textContent = siteContent["main-content"]["vision-content"];
 
