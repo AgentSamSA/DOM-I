@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -41,8 +41,18 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navLink = document.querySelectorAll("header nav a");
-navLink.forEach((link, i) => link.textContent = siteContent["nav"][`nav-item-${i + 1}`]);
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link, i) => link.textContent = siteContent["nav"][`nav-item-${i + 1}`]);
+navLinks.forEach((link) => link.style.color = "green");
+const newLink = document.createElement("a");
+const newText = document.createTextNode("Projects");
+newLink.appendChild(newText);
+const newLink2 = document.createElement("a");
+const newText2 = document.createTextNode("So Cool!");
+newLink2.appendChild(newText2);
+document.querySelector("nav").appendChild(newLink);
+document.querySelector("nav").prepend(newLink2);
+
 
 const cta = document.querySelector(".cta");
 cta.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
@@ -87,7 +97,7 @@ pText5.textContent = siteContent["main-content"]["vision-content"];
 const h4Contact = document.querySelector(".contact h4");
 h4Contact.textContent = siteContent["contact"]["contact-h4"];
 const pContact = document.querySelector(".contact p:nth-of-type(1)");
-pContact.textContent = siteContent["contact"]["address"];
+pContact.innerText = siteContent["contact"]["address"];
 const pContact2 = document.querySelector(".contact p:nth-of-type(2)");
 pContact2.textContent = siteContent["contact"]["phone"];
 const pContact3 = document.querySelector(".contact p:nth-of-type(3)");
