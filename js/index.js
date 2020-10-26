@@ -41,18 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navLink1 = document.querySelector("header nav a");
-navLink1.textContent = siteContent["nav"]["nav-item-1"];
-const navLink2 = navLink1.nextElementSibling;
-navLink2.textContent = siteContent["nav"]["nav-item-2"];
-const navLink3 = navLink2.nextElementSibling;
-navLink3.textContent = siteContent["nav"]["nav-item-3"];
-const navLink4 = navLink3.nextElementSibling;
-navLink4.textContent = siteContent["nav"]["nav-item-4"];
-const navLink5 = navLink4.nextElementSibling;
-navLink5.textContent = siteContent["nav"]["nav-item-5"];
-const navLink6 = navLink5.nextElementSibling;
-navLink6.textContent = siteContent["nav"]["nav-item-6"];
+const navLink = document.querySelectorAll("header nav a");
+navLink.forEach((link, i) => link.textContent = siteContent["nav"][`nav-item-${i + 1}`]);
 
 const cta = document.querySelector(".cta");
 cta.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
@@ -60,6 +50,14 @@ cta.querySelector("h1").innerHTML = siteContent["cta"]["h1"];
 const codeImg = document.getElementById("cta-img");
 codeImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-const 
+const button = document.querySelector(".cta button");
+button.textContent = siteContent["cta"]["button"];
+
+const topContentText = document.querySelector(".top-content .text-content");
+const h4Text = topContentText.querySelector("h4");
+h4Text.textContent = siteContent["main-content"]["features-h4"];
+const pText = topContentText.querySelector("p");
+pText.textContent = siteContent["main-content"]["features-content"];
+const copyOfTopContentText = topContentText.cloneNode(true);
 
 
